@@ -3,13 +3,13 @@ import previewImage from '@assets/img/social-preview-image.png'
 import logoImage from '@assets/img/logo.svg'
 
 export default defineThemeConfig({
-  name: 'Accessible Astro',
-  id: 'accessible-astro-starter',
+  name: 'Anea Beauty & Spa',
+  id: 'anea-beauty-and-spa',
   logo: logoImage,
   seo: {
-    title: 'Accessible Astro Starter',
+    title: 'Anea Beauty & Spa',
     description:
-      'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
+      'ANEA Beauty& Spa is a calming space designed for deep relaxation and gentle care. Our beauty and spa treatments focus on slow touch, comfort, and restoring balance for both skin. Quiet space, Gentle touch, No pressure sellin',
     author: 'Incluud',
     image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
   },
