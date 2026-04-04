@@ -29,11 +29,6 @@ export default defineThemeConfig({
       },
       {
         type: 'link',
-        label: 'Menu',
-        href: '/menu',
-      },
-      {
-        type: 'link',
         label: 'Contact',
         href: '/contact',
       },
