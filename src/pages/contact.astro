@@ -31,27 +31,7 @@ import { Icon } from 'astro-icon/components'
           <Input name="phone" label="Phone number" type="tel" required data-validation-pattern="^[0-9]{10}$" />
 
           <Textarea name="message" label="Message" required />
-
-          <!-- Checkbox group with validation -->
-          <Fieldset
-            name="interests"
-            legend="What are you interested in?"
-            required
-            data-validation="Please select at least one area of interest"
-          >
-            <Checkbox name="accessibility" value="a11y" label="Accessibility and inclusive design" />
-            <Checkbox name="wcag-compliance" value="wcag" label="WCAG compliance and testing" />
-            <Checkbox name="screen-reader" value="sr" label="Screen reader optimization" />
-            <Checkbox name="keyboard-nav" value="keyboard" label="Keyboard navigation" />
-          </Fieldset>
-
-          <!-- Radio group (shared names) -->
-          <Fieldset name="experience" legend="Your experience level" required>
-            <Radio name="experience" value="beginner" label="Beginner" />
-            <Radio name="experience" value="intermediate" label="Intermediate" />
-            <Radio name="experience" value="advanced" label="Advanced" />
-          </Fieldset>
-
+          
           <Button htmlType="submit" type="primary">Send Message</Button>
         </Form>
       </div>
