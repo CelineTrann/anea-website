@@ -30,7 +30,7 @@ export default defineThemeConfig({
       {
         type: 'link',
         label: 'Menu',
-        href: '/anea',
+        href: '/menu',
       },
       {
         type: 'link',
