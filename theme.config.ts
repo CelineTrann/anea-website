@@ -29,11 +29,6 @@ export default defineThemeConfig({
       },
       {
         type: 'link',
-        label: 'Menu',
-        href: '/anea',
-      },
-      {
-        type: 'link',
         label: 'Contact',
         href: '/contact',
       },

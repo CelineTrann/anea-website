@@ -1,171 +1,139 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import Hero from '@components/Hero.astro'
-import Feature from '@components/Feature.astro'
-import Counter from '@components/Counter.astro'
-import ContentMedia from '@components/ContentMedia.astro'
-import FeaturedProjects from '@components/FeaturedProjects.astro'
-import FeaturedPosts from '@components/FeaturedPosts.astro'
-import { Accordion, AccordionItem, Avatar, AvatarGroup, Heading, Link } from 'accessible-astro-components'
-import { Icon } from 'astro-icon/components'
+import PageHeader from '../components/PageHeader.astro'
+import { Accordion, AccordionItem, Heading } from 'accessible-astro-components'
+
 ---
 
-<DefaultLayout title="Accessible Astro Starter - Build Faster, More Inclusive Websites" useTitleTemplate={false}>
-  <Hero />
-  <section class="my-64">
-    <div class="container">
-      <Heading level="h2" class="mb-8">Features</Heading>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="lucide:accessibility" title="Accessible by default">
-          Keyboard navigation, focus indicators, ARIA labels, semantic HTML, and more. This theme is designed to be
-          inclusive.
-        </Feature>
-        <Feature icon="lucide:puzzle" title="A11Y components">
-          35+ components and counting, all tried and tested for the most optimal accessible experience for your
-          visitors.
-        </Feature>
-        <Feature icon="lucide:moon" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="lucide:paintbrush" title="Tailwind 4.0">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
-        </Feature>
-        <Feature icon="lucide:sparkles" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
-        </Feature>
-        <Feature icon="lucide:code" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
-        </Feature>
-        <Feature icon="lucide:bookmark" title="Blog & portfolio">
-          This theme comes with a fully integrated blog and portfolio, dynamic pages and SEO optimization.
-        </Feature>
-        <Feature icon="lucide:file-text" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="lucide:blocks" title="Design system">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-      </div>
-    </div>
+<DefaultLayout title="ANEA Beauty & Spa">
+  <section class="my-10">
+    <PageHeader 
+      title="HEAD SPA TREATMENT"
+      subtitle='ANEA Beauty & Spa is a calming space designed for deep relaxation and gentle care. Our beauty and spa treatments focus on slow touch, comfort, and restoring balance for both skin.
+        Quiet space, Gentle touch, No pressure selling'
+      showBreadcrumbs={false}
+      />
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <Heading level="h2">Accessible components</Heading>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <Link
-        isExternal
-        href="https://github.com/incluud/accessible-astro-components">separate package</Link
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <Heading level="h2">WCAG 2.2 AA compliant</Heading>
-    <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
-      navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
-      reaching WCAG AA compliance.
-    </p>
-  </ContentMedia>
-  <FeaturedProjects />
-  <FeaturedPosts />
-  <section class="my-64">
-    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
-      <div class="flex flex-col items-start gap-4">
-        <Heading level="h2">FAQ</Heading>
-        <p class="text-2xl">
-          This section demonstrates how to effectively use the Accordion component to organize and display frequently
-          asked questions in an accessible and user-friendly way.
-        </p>
-        <Link href="/faq" isButton type="primary" animateOnHover animationType="boop">
-          <Icon aria-hidden="true" name="lucide:headset" size=" 1.5rem" />
-          Contact support team
-        </Link>
-      </div>
-      <div class="space-content">
+  <section class="mt-10 mb-10">
+    <div class="components container">
+
+      <div class="my-2">
+        <Heading level="h2">Head Spa Rituals</Heading>
         <Accordion>
-          <AccordionItem name="exclusive" title="What is WCAG and why is it important?" open>
+          <AccordionItem title="Signature Head Spa Treatment – $105" variant="chevron">
             <p>
-              WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web
-              accessibility. Following WCAG ensures your website is usable by people with various disabilities,
-              including visual, auditory, physical, and cognitive impairments. It's important not just for
-              accessibility, but also for legal compliance, SEO, and reaching a wider audience.
+              90 min
+            </p>
+            <p>
+              The ultimate Anea sensory journey. This immersive 95-minute masterpiece combines ancient rhythmic massage with a meticulous deep-cleansing process. Designed to facilitate lymphatic drainage and profound mental stillness, this treatment goes beyond the surface to offer a complete energetic reset for the modern sou
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What's the difference between ARIA labels and alt text?">
+          <AccordionItem title="Nourishing Hair Mask Ritual - $95" variant="chevron">
             <p>
-              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
-              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
-              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
-              advanced UI controls more accessible.
+              75 min
+            </p>
+            <p>
+              A dual-purpose sanctuary for both hair health and deep relaxation. Your strands are enveloped in a nutrient-rich, deeply hydrating botanical mask, paired with a soothing, slow-paced scalp massage. As the moisture-rich treatment restores shine and elasticity to your hair, your nervous system drifts into a state of total repose.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="Why is keyboard navigation important?">
+          <AccordionItem title="Restore Scalp Ritual - $80" variant="chevron">
             <p>
-              Keyboard navigation is essential for users who can't use a mouse, including people with motor
-              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
-              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
-              able to access all interactive elements and navigate through content efficiently.
+              60 min
+            </p>
+            <p>
+              A restorative deep-cleanse for the scalp’s ecosystem. This ritual features an extended purifying treatment designed to gently remove environmental build-up while stimulating micro-circulation at the follicle. Combined with a rhythmic massage, it provides a "breath of fresh air" for your scalp, leaving it balanced and revitalized.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
+          <AccordionItem title="Refresh Scalp Ritaul (Express) - $60" variant="chevron">
             <p>
-              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
-              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
-              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
-              impairments or color blindness.
+              45 min
             </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="How do I make custom components accessible?">
             <p>
-              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
-              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
-              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
-              established design patterns from the <Link href="https://www.w3.org/WAI/ARIA/apg/patterns/"
-                >ARIA Authoring Practices Guide</Link
-              >.
+              A focused, revitalizing escape designed to melt away the weight of the day. This ritual centers on the crown, temples, and neck, using targeted massage techniques and signature botanical oils. Perfect for a midday reset to release mental fatigue and restore clarity to the mind and body.
             </p>
           </AccordionItem>
         </Accordion>
       </div>
-    </div>
-  </section>
-  <section class="my-64">
-    <div class="space-content container">
-      <Heading level="h2">Our community</Heading>
-      <p class="text-2xl">
-        We're a community of developers who are passionate about making the web more accessible. We're always looking
-        for new ways to improve the accessibility of the web.
-      </p>
-      <AvatarGroup display="grid" gridItemsSize="300px" gridGap="2rem">
-        <Avatar initials="RJ" title="Robert Johnson" subtitle="Manager" />
-        <Avatar initials="MT" title="Maria Torres" subtitle="Developer" />
-        <Avatar initials="AK" title="Alex Kim" subtitle="Designer" />
-        <Avatar initials="SL" title="Sarah Lee" subtitle="Content Strategist" />
-        <Avatar initials="JP" title="James Peterson" subtitle="QA Engineer" />
-        <Avatar initials="LW" title="Lisa Wong" subtitle="Product Owner" />
-        <Avatar initials="DM" title="David Martinez" subtitle="UX Researcher" />
-        <Avatar initials="EB" title="Emma Brown" subtitle="Accessibility Specialist" />
-        <Avatar initials="TC" title="Thomas Chen" subtitle="Frontend Developer" />
-      </AvatarGroup>
-    </div>
-  </section>
-  <section class="mt-64 mb-32">
-    <div class="container">
-      <Heading level="h2" class="mb-16">Impact in numbers</Heading>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="1.100+" title="Stars" sub="On GitHub" />
-        <Counter count="35+" title="Accessible" sub="Components" />
-        <Counter count="500+" title="Commits" sub="Merged" />
-        <Counter count="48+" title="Months" sub="Since launch" />
+
+      <div class="my-2">
+        <Heading level="h2">Facial Rejuventation</Heading>
+        <Accordion>
+          <AccordionItem title="The Anea Facial Treatment - $110" variant="chevron">
+            <p>
+              80 min
+            </p>
+            <p>
+              The ultimate age-defying ritual for those seeking deep restoration. We combine high-performance botanicals with a signature, extended facial massage designed to lift, sculpt, and tone. By increasing circulation and infusing your skin with nutrient-dense serums, this treatment awakens a youthful, lasting radiance that glows from within.
+            </p>
+          </AccordionItem>
+          <AccordionItem title="The Anea Signature - $90" variant="chevron">
+            <p>
+              60 min
+            </p>
+            <p>
+              Our cornerstone ritual for total skin rejuvenation. This treatment focuses on deep-pore purification followed by a personalized botanical mask that acts as a moisture blanket for the skin. It balances your complexion and restores essential hydration, leaving your face feeling supple, clean, and perfectly refreshed.
+            </p>
+          </AccordionItem>
+          <AccordionItem title="Calm and Clense Ritual - $70" variant="chevron">
+            <p>
+              45 min
+            </p>
+            <p>
+              Designed for the modern, busy soul, this ritual targets inflammation and dullness. Following a gentle botanical cleanse, we perform a rhythmic lymphatic drainage massage to de-puff and detoxify the skin. It’s an efficient way to brighten your complexion and quiet your mind in under an hour.
+            </p>
+          </AccordionItem>
+          <AccordionItem title="The Glow - $50" variant="chevron">
+            <p>
+              30 min
+            </p>
+            <p>
+              The perfect "pick-me-up" for a luminous, instant lift. This revitalizing treatment is a concentrated burst of energy for tired skin. We focus on a deep cleanse and a quick-lift botanical infusion to restore your natural, dewy finish. Ideal as a pre-event glow or a routine monthly maintenance.
+            </p>
+          </AccordionItem>
+        </Accordion>
       </div>
+
+      <div class="my-2">
+        <Heading level="h2">Signature Ritual</Heading>
+        <Accordion>
+          <AccordionItem title="The Crown Ceremony - $160" variant="chevron">
+            <p>
+              135 min
+            </p>
+            <p>Our most prestigious and immersive offering. This ceremony is a full-sensory journey designed for total transformation. It begins with the Anea Glow Facial to sculpt and illuminate the complexion, seamlessly transitioning into an extended, meditative head massage. By addressing the primary tension points of the face, scalp, and neck, this ritual facilitates a state of profound relaxation and leaves you with an incomparable, head-to-toe radiance.</p>
+          </AccordionItem>
+          <AccordionItem title="The Luminous - $140" variant="chevron">
+            <p>
+              115 min
+            </p>
+            <p>A ritual of deep hydration and vital energy. This experience pairs a moisture-drenching botanical facial with a targeted herbal head spa treatment. As nutrient-rich infusions restore elasticity to your skin, the herbal scalp ritual works to clear mental fog and ground your spirit. You will leave feeling "Luminous"—balanced, hydrated, and deeply replenished from the inside out.</p>
+          </AccordionItem>
+          <AccordionItem title="The Radian - $120" variant="chevron">
+            <p>
+              95 min
+            </p>
+            <p>Designed to unburden the mind and reveal your natural light. This pairing features a gentle, calming facial treatment to soothe environmental stress, followed by a rhythmic head spa ritual. By focusing on steady, intentional movements and botanical aromatics, the Radiance ritual quietens the nervous system, allowing your natural, effortless glow to emerge.</p>
+          </AccordionItem>
+          <AccordionItem title="The Renewal - $90" variant="chevron">
+            <p>
+              75 min
+            </p>
+            <p>A concentrated awakening for the skin and spirit. This focused ritual is the perfect reset for those with limited time but a deep need for sanctuary. It combines a curated mini-facial to refresh the skin’s surface with a soothing, tension-melting head spa. It is a brief but powerful "Renewal" that clears the path for a brighter complexion and a lighter heart.</p>
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      <div class="my-2">
+        <Heading level="h2">Enhancement and Add-Ons</Heading>
+        <div class="columns-md">
+          <p>Extra Massage (head, neck, shoulder): $10 CAD</p>
+          <p>Hand Mask: $5 CAD</p>
+          <p>Hair Mask: $5 CAD</p>
+          <p>Head Scalp Exfoliation: $10 CAD</p>
+          <p>Foot Detox: $15 CAD</p>
+        </div>
+      </div>
+
     </div>
   </section>
 </DefaultLayout>
-
-<style>
-  .avatar {
-    border: 1px solid var(--border-color-subtle);
-    border-radius: var(--radius-md);
-    padding: var(--space-s);
-  }
-</style>
