@@ -20,7 +20,7 @@ export default defineThemeConfig({
     outline: '#ff4500',
   },
   navigation: {
-    darkmode: true,
+    darkmode: false,
     items: [
       {
         type: 'link',
