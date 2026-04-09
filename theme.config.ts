@@ -10,7 +10,7 @@ export default defineThemeConfig({
     title: 'Anea Beauty & Spa',
     description:
       'ANEA Beauty& Spa is a calming space designed for deep relaxation and gentle care. Our beauty and spa treatments focus on slow touch, comfort, and restoring balance for both skin. Quiet space, Gentle touch, No pressure sellin',
-    author: 'Incluud',
+    author: 'Anea Beauty & Spa',
     image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
   },
   colors: {
