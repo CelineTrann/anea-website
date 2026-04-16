@@ -1,11 +1,11 @@
 import { defineThemeConfig } from '@utils/defineThemeConfig'
 import previewImage from '@assets/img/social-preview-image.png'
-import logoImage from '@assets/img/logo.svg'
+import aneaLogo from  '@assets/img/anea-logo.png'
 
 export default defineThemeConfig({
   name: 'Anea Beauty & Spa',
   id: 'anea-beauty-and-spa',
-  logo: logoImage,
+  logo: aneaLogo,
   seo: {
     title: 'Anea Beauty & Spa',
     description:
