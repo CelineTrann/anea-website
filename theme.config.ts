@@ -1,5 +1,4 @@
 import { defineThemeConfig } from '@utils/defineThemeConfig'
-import previewImage from '@assets/img/social-preview-image.png'
 import aneaLogo from  '@assets/img/anea-logo.png'
 
 export default defineThemeConfig({
